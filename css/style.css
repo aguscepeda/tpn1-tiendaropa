@@ -91,4 +91,17 @@ main p { /* Estilos para el párrafo de MAIN */
     color: #e0e0e0; /* color del texto del párrafo */
 }
 
+.logo { /* Estilos para la imagen del logo en MAIN */
+    max-width: 300px; /* ancho máximo para la imagen del logo */
+    margin: 2rem 0; /* margen vertical para separar del texto */
+    border: 5px solid #ff00aa; /* borde rosado */
+    border-radius: 15px; /* bordes redondeados para un estilo más suave */
+    box-shadow: 0 0 40px rgba(255, 0, 170, 0.7); /* sombra de neón para resaltar la imagen */
+    transition: all 0.4s ease; /* transición suave para hover */
+}
+
+.logo:hover { /* Efecto hover para la imagen del logo */
+    transform: scale(1.05); /* agrandar ligeramente la imagen al pasar el mouse */
+    box-shadow: 0 0 60px rgba(255, 0, 170, 0.9); /* aumentar el brillo del neón al hacer hover */
+}
 
