@@ -105,3 +105,13 @@ main p { /* Estilos para el párrafo de MAIN */
     box-shadow: 0 0 60px rgba(255, 0, 170, 0.9); /* aumentar el brillo del neón al hacer hover */
 }
 
+/*----------------------------- FOOTER,PIE DE PAGINA -----------------------------------------*/
+
+footer {
+    background-color: #0a0a0a;
+    padding: 2.5rem 5%;
+    text-align: center;
+    border-top: 1px solid #333333;
+    color: #777777;
+    font-size: 0.95rem;
+}
