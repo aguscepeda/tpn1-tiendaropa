@@ -14,7 +14,7 @@ body {
 
 /* ----------------------------- ENCABEZADOS DE PAGINAS -----------------------------------------*/
 
-header {
+header { /* general para seccion HEADER */
     background: linear-gradient(135deg, #1a1a1a, #000000);
     padding: 1.5rem 5%;        
     position: sticky;          /* Se queda fijo al hacer scroll */
@@ -24,7 +24,7 @@ header {
     text-align: center;        /* texto centrado */
 }
 
-header h1 {
+header h1 { /* Estilos para header h1 */
     font-size: 2.6rem;   /* tamaño h1 */
     font-weight: 900;    /* negrura del h1 */
     letter-spacing: 4px;  /* espaciado entre letras */
@@ -35,7 +35,7 @@ header h1 {
 
 /*-------------------------- BARRA DE NAVEGACION PAGINAS -----------------------------------------*/
 
-nav ul {
+nav ul { /* general para seccion NAV */
     list-style: none; /* quitar viñetas */
     display: flex; /* usar flexbox para el menú */
     justify-content: center; /* centrar los elementos del menú */
@@ -44,7 +44,7 @@ nav ul {
     flex-wrap: wrap;        /* permitir que el menú se ajuste en pantallas pequeñas */
 }
 
-nav a {
+nav a { /* Estilos para ENLACES de NAV UL */
     color: #e0e0e0; /* color del texto de los enlaces */
     text-decoration: none; /* quitar subrayado */
     font-weight: 600;  /* negrura de la letra */
@@ -54,8 +54,41 @@ nav a {
     transition: all 0.3s ease; /* transición suave para hover */
 } 
 
-nav a:hover {
+nav a:hover { /* Estilos para los enlaces del menú al pasar el mouse */
     background-color: #ff00aa;
     color: #000000;
     transform: scale(1.08);
 }
+
+/*----------------------------- MAIN, CONTENIDO PRINCIPAL -----------------------------------------*/
+
+main { /* General para la sección MAIN */
+    padding: 5rem 5%; /* espacio interno para el contenido principal */
+    text-align: center; /* texto centrado */
+    min-height: 85vh; /* altura mínima para ocupar la mayor parte de la pantalla */
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+    url('../assets/img/imagenHeaderStreetWearUrban.jpg') center/cover no-repeat; /* fondo con imagen y superposición oscura */
+    display: flex; /* usar flexbox para centrar el contenido */
+    flex-direction: column; /* organizar el contenido en columna */
+    justify-content: center; /* centrar verticalmente */
+    align-items: center; /* centrar horizontalmente */
+}
+
+main h2 { /* Estilos para el título h2 de MAIN */
+    font-size: 3.8rem; /* tamaño del h2 */
+    margin-bottom: 1.5rem; /* margen inferior */
+    text-transform: uppercase; /* texto en mayúsculas */
+    letter-spacing: 5px; /* espaciado entre letras */
+    color: #ffffff; /* color del texto */
+    text-shadow: 0 0 25px rgba(255, 0, 170, 0.9); /* efecto de brillo neón */
+}
+
+main p { /* Estilos para el párrafo de MAIN */
+    max-width: 720px; /* ancho máximo para mejorar la legibilidad */
+    font-size: 1.25rem; /* tamaño de letra del párrafo */
+    margin-bottom: 2.5rem; /* margen inferior para separar del botón */
+    opacity: 0.95; /* ligera transparencia para el texto */
+    color: #e0e0e0; /* color del texto del párrafo */
+}
+
+
