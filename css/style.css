@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* margin y padding 0 para todo, box-sizing */
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    background-color: #0f0f0f;         /* Fondo negro oscuro estilo urbano */
+    color: #e0e0e0;                    /* Color de texto claro */
+    line-height: 1.6;                    /* Espaciado entre líneas */
+}
+
+header {
+    background: linear-gradient(135deg, #1a1a1a, #000000);
+    padding: 1.5rem 5%;        
+    position: sticky;          /* Se queda fijo al hacer scroll */
+    top: 0;                    /* Se posiciona en la parte superior */
+    z-index: 100;              /* Se coloca por encima de otros elementos */
+    border-bottom: 3px solid #ff00aa;   /* Línea neón rosa */
+    text-align: center;        /* texto centrado */
+}
+
