@@ -254,3 +254,43 @@ footer {
                 padding: 2rem 1.5rem;
             }
         }
+
+/*----------------------------- Servicios y productos ----------------------------- */
+
+    .servicios h2 {
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+
+    .servicio {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin: 15px auto;
+    width: 250px;
+    border-radius: 10px;
+    }
+
+    img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    }
+
+    .contenedor-servicios {
+    display: flex;           /* 🔥 horizontal */
+    justify-content: center; 
+    gap: 30px;
+    flex-wrap: wrap;         /* responsive */
+}
+
+    .servicio {
+    width: 200px;
+    text-align: center;
+}
+
+    .subtitulo {
+    text-align: center;   /* centra el texto */
+    max-width: 600px;     /* limita el ancho */
+    margin: 0 auto;       /* 🔥 lo centra en la página */
+}
