@@ -278,7 +278,7 @@ footer {
     }
 
     .contenedor-servicios {
-    display: flex;           /* 🔥 horizontal */
+    display: flex;           /* horizontal */
     justify-content: center; 
     gap: 30px;
     flex-wrap: wrap;         /* responsive */
@@ -292,5 +292,38 @@ footer {
     .subtitulo {
     text-align: center;   /* centra el texto */
     max-width: 600px;     /* limita el ancho */
-    margin: 0 auto;       /* 🔥 lo centra en la página */
+    margin: 0 auto;       /* lo centra en la página */
+}
+
+/*----------------------------- FAQ ----------------------------- */
+.contenedor-principal {
+  text-align: center; /* Centra los cuadros en la pantalla [6] */
+}
+
+.parrafo-faq {
+    text-align: center; /* Centra el texto del párrafo [7] */
+  max-width: 600px;   /* Limita el ancho del párrafo para mejor lectura [7] */
+  margin: 0 auto 40px; /* Centra el párrafo y agrega espacio debajo [7] */
+  color: #e0e0e0;     /* Color del texto del párrafo [7] */
+  font-size: 1;  /* Tamaño de letra del párrafo [7] */
+font-weight: 700;
+}
+
+
+.cuadro {
+  display: inline-block; /* Los ordena horizontalmente [6] */;
+  justify-content: center; /* centra horizontalmente */
+  vertical-align: top;   /* Mantiene la alineación al abrirse [8] */
+  width: 200px;          /* Ancho de cada cuadro [6] */
+  margin: 10px;          /* Espacio entre cuadros [9] */
+  padding: 15px;         /* Espacio interno [5] */
+  border: 2px solid rgb(0, 0, 0); /* Apariencia de cuadro [9] */
+  background-color: #ff00aa5b;
+  border-radius: 50px;/* Bordes redondeados para un estilo más suave [9] */
+  box-shadow: 0 0 20px rgba(255, 0, 170, 0.5); /* Sombra de neón para resaltar los cuadros [9] */
+  vertical-align: top;
+}
+
+.titulo-FAQ{
+    text-align: center; /* Centra los cuadros en la pantalla [6] */
 }
