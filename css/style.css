@@ -425,3 +425,90 @@ footer {
     font-size: 0.9rem;
     line-height: 1.5;
 }
+
+
+/*------------------------------------ PEDIDO DE SERVICIOS -----------------------------------------------*/
+.pedido-section { /*contenedor principal del formulario*/
+    max-width: 750px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #1a1a1a, #111111);
+    border: 1px solid #333333;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 0 40px rgba(255, 0, 170, 0.15);
+}
+
+.pedido-section h2 { /*estiliza el titulo*/ 
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 0, 170, 0.8);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.pedido-section .subtitulo {
+    text-align: center;
+    color: #888888;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.pedido-section select,             /*aplica estilo a todos los campos*/ 
+.pedido-section input[type="date"],
+.pedido-section input[type="tel"],
+.pedido-section input[type="text"],
+.pedido-section textarea {                          
+    width: 100%;
+    background-color: #0f0f0f;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.pedido-section select:focus,
+.pedido-section input:focus,
+.pedido-section textarea:focus {
+    border-color: #ff00aa;
+    box-shadow: 0 0 12px rgba(255, 0, 170, 0.35);
+}
+
+.opciones-inline { /*contenedor de las opciones*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    margin-top: 0.5rem;
+    justify-content: center;   /* esto centra horizontalmente */
+    text-align: center;        /* centra el texto */
+}
+
+.opcion { /*cada opcion individual*/
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.opcion input[type="radio"], /* estiliza los botones de opcion*/
+.opcion input[type="checkbox"] {
+    accent-color: #ff00aa;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .pedido-section {
+        padding: 2rem 1.5rem;
+    }
+
+    .opciones-inline {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
