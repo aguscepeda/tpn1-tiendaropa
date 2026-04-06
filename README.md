@@ -1,6 +1,6 @@
 # tpn1-tiendaropa
 
-# grupo numero: 12
+# grupo numero: 16
 
 
 # Integrantes:
