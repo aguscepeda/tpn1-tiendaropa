@@ -1,0 +1,514 @@
+/* Estilos generales para toda la página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* margin y padding 0 para todo, box-sizing */
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    background-color: #0f0f0f;         /* Fondo negro oscuro estilo urbano */
+    color: #e0e0e0;                    /* Color de texto claro */
+    line-height: 1.6;                    /* Espaciado entre líneas */
+}
+
+/* ----------------------------- ENCABEZADOS DE PAGINAS -----------------------------------------*/
+
+header { /* general para seccion HEADER */
+    background: linear-gradient(135deg, #1a1a1a, #000000);
+    padding: 1.5rem 5%;        
+    position: sticky;          /* Se queda fijo al hacer scroll */
+    top: 0;                    /* Se posiciona en la parte superior */
+    z-index: 100;              /* Se coloca por encima de otros elementos */
+    border-bottom: 3px solid #ff00aa;   /* Línea neón rosa */
+    text-align: center;        /* texto centrado */
+}
+
+header h1 { /* Estilos para header h1 */
+    font-size: 2.6rem;   /* tamaño h1 */
+    font-weight: 900;    /* negrura del h1 */
+    letter-spacing: 4px;  /* espaciado entre letras */
+    text-transform: uppercase; /* h1 todo en mayuscula */
+    color: #ffffff;          /* color del texto h1 */
+    text-shadow: 0 0 20px #ff00aa;     /* Efecto glow neón */
+}
+
+/*-------------------------- BARRA DE NAVEGACION PAGINAS -----------------------------------------*/
+
+nav ul { /* general para seccion NAV */
+    list-style: none; /* quitar viñetas */
+    display: flex; /* usar flexbox para el menú */
+    justify-content: center; /* centrar los elementos del menú */
+    gap: 2rem;              /* espacio entre los elementos del menú */
+    margin-top: 1rem;       /* margen superior para separar del h1 */
+    flex-wrap: wrap;        /* permitir que el menú se ajuste en pantallas pequeñas */
+}
+
+nav a { /* Estilos para ENLACES de NAV UL */
+    color: #e0e0e0; /* color del texto de los enlaces */
+    text-decoration: none; /* quitar subrayado */
+    font-weight: 600;  /* negrura de la letra */
+    font-size: 1.1rem;  /* tamaño de letra de los enlaces */
+    padding: 10px 20px;  /* espacio interno para hacer los enlaces más grandes */
+    border-radius: 30px;  /* bordes redondeados para un estilo más suave */
+    transition: all 0.3s ease; /* transición suave para hover */
+} 
+
+nav a:hover { /* Estilos para los enlaces del menú al pasar el mouse */
+    background-color: #ff00aa;
+    color: #000000;
+    transform: scale(1.08);
+}
+
+/*----------------------------- MAIN, CONTENIDO PRINCIPAL -----------------------------------------*/
+
+main { /* General para la sección MAIN */
+    padding: 5rem 5%; /* espacio interno para el contenido principal */
+    text-align: center; /* texto centrado */
+    min-height: 85vh; /* altura mínima para ocupar la mayor parte de la pantalla */
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+    url('../assets/img/imagenHeaderStreetWearUrban.jpg') center/cover no-repeat; /* fondo con imagen y superposición oscura */
+    display: flex; /* usar flexbox para centrar el contenido */
+    flex-direction: column; /* organizar el contenido en columna */
+    justify-content: center; /* centrar verticalmente */
+    align-items: center; /* centrar horizontalmente */
+}
+
+main h2 { /* Estilos para el título h2 de MAIN */
+    font-size: 3.8rem; /* tamaño del h2 */
+    margin-bottom: 1.5rem; /* margen inferior */
+    text-transform: uppercase; /* texto en mayúsculas */
+    letter-spacing: 5px; /* espaciado entre letras */
+    color: #ffffff; /* color del texto */
+    text-shadow: 0 0 25px rgba(255, 0, 170, 0.9); /* efecto de brillo neón */
+}
+
+main p { /* Estilos para el párrafo de MAIN */
+    max-width: 720px; /* ancho máximo para mejorar la legibilidad */
+    font-size: 1.25rem; /* tamaño de letra del párrafo */
+    margin-bottom: 2.5rem; /* margen inferior para separar del botón */
+    opacity: 0.95; /* ligera transparencia para el texto */
+    color: #e0e0e0; /* color del texto del párrafo */
+}
+
+.logo { /* Estilos para la imagen del logo en MAIN */
+    max-width: 300px; /* ancho máximo para la imagen del logo */
+    margin: 2rem 0; /* margen vertical para separar del texto */
+    border: 5px solid #ff00aa; /* borde rosado */
+    border-radius: 15px; /* bordes redondeados para un estilo más suave */
+    box-shadow: 0 0 40px rgba(255, 0, 170, 0.7); /* sombra de neón para resaltar la imagen */
+    transition: all 0.4s ease; /* transición suave para hover */
+}
+
+.logo:hover { /* Efecto hover para la imagen del logo */
+    transform: scale(1.05); /* agrandar ligeramente la imagen al pasar el mouse */
+    box-shadow: 0 0 60px rgba(255, 0, 170, 0.9); /* aumentar el brillo del neón al hacer hover */
+}
+
+/*----------------------------- FOOTER,PIE DE PAGINA -----------------------------------------*/
+
+footer {
+    background-color: #0a0a0a;
+    padding: 2.5rem 5%;
+    text-align: center;
+    border-top: 1px solid #333333;
+    color: #777777;
+    font-size: 0.95rem;
+}
+
+
+/*----------------------------- CONTACTO SECTION -----------------------------------------*/
+
+/* ----------------------------- ESTILOS ESPECIFICOS CONTACTO ----------------------------- */
+
+        .contacto-section { /* Sección principal del formulario de contacto */
+            max-width: 650px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, #1a1a1a, #111111);
+            border: 1px solid #333333;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 0 40px rgba(255, 0, 170, 0.15);
+        }
+
+        .contacto-section h2 { /* Título del formulario */
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 0, 170, 0.8);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .contacto-section p.subtitulo { /* Subtítulo del formulario */
+            text-align: center;
+            color: #888888;
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .form-group { /* Grupo de campo + label */
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label { /* Etiquetas de los campos */
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #ff00aa;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .form-group input,
+        .form-group textarea { /* Campos de texto */
+            background-color: #0f0f0f;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            font-size: 1rem;
+            padding: 0.75rem 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+            resize: vertical; /* solo para textarea */
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus { /* Efecto al hacer foco en un campo */
+            border-color: #ff00aa;
+            box-shadow: 0 0 12px rgba(255, 0, 170, 0.35);
+        }
+
+        .form-group textarea { /* Textarea de mensaje */
+            min-height: 140px;
+        }
+
+        .form-fila { /* Fila con dos campos lado a lado (nombre y apellido) */
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .form-fila .form-group { /* Cada grupo dentro de la fila ocupa el mismo espacio */
+            flex: 1;
+        }
+
+        .form-botones { /* Contenedor de botones */
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-enviar { /* Botón de envío */
+            flex: 2;
+            background-color: #ff00aa;
+            color: #000000;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.85rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-enviar:hover { /* Efecto hover botón enviar */
+            background-color: #ff33bb;
+            box-shadow: 0 0 25px rgba(255, 0, 170, 0.7);
+            transform: scale(1.03);
+        }
+
+        .btn-reset { /* Botón de reset */
+            flex: 1;
+            background-color: transparent;
+            color: #e0e0e0;
+            border: 1px solid #444444;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.85rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-reset:hover { /* Efecto hover botón reset */
+            border-color: #ff00aa;
+            color: #ff00aa;
+        }
+
+        /* Responsive para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .form-fila {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .contacto-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+/*----------------------------- Servicios y productos ----------------------------- */
+
+    .servicios h2 {
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+
+    .servicio {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin: 15px auto;
+    width: 250px;
+    border-radius: 10px;
+    }
+
+    img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    }
+
+    .contenedor-servicios {
+    display: flex;           /* horizontal */
+    justify-content: center; 
+    gap: 30px;
+    flex-wrap: wrap;         /* responsive */
+}
+
+    .servicio {
+    width: 200px;
+    text-align: center;
+}
+
+    .subtitulo {
+    text-align: center;   /* centra el texto */
+    max-width: 600px;     /* limita el ancho */
+    margin: 0 auto;       /* lo centra en la página */
+}
+
+/*----------------------------- FAQ ----------------------------- */
+.contenedor-principal {
+    text-align: center; /* Centra los cuadros en la pantalla [6] */
+}
+
+.parrafo-faq {
+    text-align: center; /* Centra el texto del párrafo [7] */
+    max-width: 600px;   /* Limita el ancho del párrafo para mejor lectura [7] */
+    margin: 0 auto 40px; /* Centra el párrafo y agrega espacio debajo [7] */
+    color: #e0e0e0;     /* Color del texto del párrafo [7] */
+    font-size: 1;  /* Tamaño de letra del párrafo [7] */
+    font-weight: 700;
+}
+
+
+.cuadro {
+    display: inline-block; /* Los ordena horizontalmente [6] */;
+    justify-content: center; /* centra horizontalmente */
+    vertical-align: top;   /* Mantiene la alineación al abrirse [8] */
+    width: 200px;          /* Ancho de cada cuadro [6] */
+    margin: 10px;          /* Espacio entre cuadros [9] */
+    padding: 15px;         /* Espacio interno [5] */
+    border: 2px solid rgb(0, 0, 0); /* Apariencia de cuadro [9] */
+    background-color: #ff00aa5b;
+    border-radius: 50px;/* Bordes redondeados para un estilo más suave [9] */
+    box-shadow: 0 0 20px rgba(255, 0, 170, 0.5); /* Sombra de neón para resaltar los cuadros [9] */
+    vertical-align: top;
+}
+
+.titulo-FAQ{
+    text-align: center; /* Centra los cuadros en la pantalla [6] */
+}
+
+.cuadro[open] summary { /* Estilos para el resumen del cuadro abierto [8] */
+    border-bottom: 2px solid #ff00aa; /* Línea de separación para el cuadro abierto [8] */
+    box-shadow: 0 2px 10px rgba(255, 0, 170, 0.5);    /* Sombra más intensa para el cuadro abierto [8] */
+    margin-bottom: 15px; /* Espacio debajo del resumen del cuadro abierto [8] */
+    padding-bottom: 10px; /* Espacio interno debajo del resumen del cuadro abierto [8] */
+}
+
+/*------------------------------------ EQUIPO / SOBRE NOSOTROS -----------------------------------------------*/
+
+.equipo-section {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.equipo-section h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 0, 170, 0.8);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.equipo-section p.subtitulo {
+    text-align: center;
+    color: #888888;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* Contenedor principal que apila las filas verticalmente */
+.contenedor-equipo {
+    display: flex;
+    flex-direction: column; /* Pone una fila debajo de la otra */
+    align-items: center;
+    gap: 2rem; /* Espacio entre la fila de arriba y la de abajo */
+}
+
+/* Contenedor para cada fila individual */
+.fila-equipo {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Espacio entre las tarjetas de una misma fila */
+    flex-wrap: wrap; /* Mantiene el diseño responsive para celulares */
+    width: 100%;
+}
+
+.tarjeta-integrante {
+    background: linear-gradient(145deg, #1a1a1a, #111111);
+    border: 2px solid #333333; 
+    padding: 2rem 1.5rem;      
+    margin: 10px;              
+    border-radius: 16px;
+    width: 280px; 
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 0, 170, 0.05);
+    transition: all 0.3s ease;
+}
+
+.tarjeta-integrante:hover {
+    border-color: #ff00aa;
+    box-shadow: 0 0 30px rgba(255, 0, 170, 0.4);
+    transform: translateY(-10px);
+}
+
+.img-integrante {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Evita que la imagen se estire feo */
+    border-radius: 50%; /* Hace la imagen circular */
+    border: 3px solid #ff00aa; /* Borde neón para las fotos */
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px rgba(255, 0, 170, 0.5);
+}
+
+.tarjeta-integrante h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.tarjeta-integrante .rol {
+    color: #ff00aa;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-integrante p {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+/*------------------------------------ PEDIDO DE SERVICIOS -----------------------------------------------*/
+.pedido-section { /*contenedor principal del formulario*/
+    max-width: 750px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #1a1a1a, #111111);
+    border: 1px solid #333333;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 0 40px rgba(255, 0, 170, 0.15);
+}
+
+.pedido-section h2 { /*estiliza el titulo*/ 
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 0, 170, 0.8);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.pedido-section .subtitulo {
+    text-align: center;
+    color: #888888;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.pedido-section select,             /*aplica estilo a todos los campos*/ 
+.pedido-section input[type="date"],
+.pedido-section input[type="tel"],
+.pedido-section input[type="text"],
+.pedido-section textarea {                          
+    width: 100%;
+    background-color: #0f0f0f;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.pedido-section select:focus,
+.pedido-section input:focus,
+.pedido-section textarea:focus {
+    border-color: #ff00aa;
+    box-shadow: 0 0 12px rgba(255, 0, 170, 0.35);
+}
+
+.opciones-inline { /*contenedor de las opciones*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    margin-top: 0.5rem;
+    justify-content: center;   /* esto centra horizontalmente */
+    text-align: center;        /* centra el texto */
+}
+
+.opcion { /*cada opcion individual*/
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.opcion input[type="radio"], /* estiliza los botones de opcion*/
+.opcion input[type="checkbox"] {
+    accent-color: #ff00aa;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .pedido-section {
+        padding: 2rem 1.5rem;
+    }
+
+    .opciones-inline {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}

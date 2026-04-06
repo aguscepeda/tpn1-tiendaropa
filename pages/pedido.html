@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/img/urbanStyle_logo.png" type="image/x-icon">
+
+    <title>Pedido Online - Urban Style Clothing</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Urban Style Clothing</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html" target="_self">Inicio</a></li>
+            <li><a href="./servicios.html" target="_self">Servicios/Productos</a></li>
+            <li><a href="./equipo.html" target="_self">Equipo/Sobre Nosotros</a></li>
+            <li><a href="./pedido.html" target="_self">Pedido Online</a></li>
+            <li><a href="./contacto.html" target="_self">Contacto</a></li>
+            <li><a href="./faq.html" target="_self">Preguntas Frecuentes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="pedido-section">
+            <h2>Pedido de Servicio</h2>
+            <p class="subtitulo">
+                Completá el formulario para solicitar uno de nuestros servicios.
+            </p>
+
+            <form action="#" method="post">
+
+                <div class="form-group">
+                    <label for="nombre-completo">Nombre completo</label>
+                    <input type="text" id="nombre-completo" name="nombre-completo" placeholder="Tu nombre y apellido" required>
+                </div>
+
+                <div class="form-fila">
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 2914567890" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha">Fecha deseada</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicio">Seleccioná un servicio</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="" disabled selected hidden>Elegí una opción</option>
+                        <option value="envio">Envíos a todo el país</option>
+                        <option value="asesoramiento">Asesoramiento personalizado</option>
+                        <option value="cambios">Cambios fáciles</option>
+                        <option value="personalizacion">Personalización de prendas</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Modalidad de atención</label>
+                    <div class="opciones-inline">
+                        <label class="opcion">
+                            <input type="radio" name="modalidad" value="online" required>
+                            Online
+                        </label>
+
+                        <label class="opcion">
+                            <input type="radio" name="modalidad" value="presencial">
+                            Presencial
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Extras solicitados</label>
+                    <div class="opciones-inline">
+                        <label class="opcion">
+                            <input type="checkbox" name="extras" value="seguimiento">
+                            Seguimiento del pedido
+                        </label>
+
+                        <label class="opcion">
+                            <input type="checkbox" name="extras" value="urgente">
+                            Atención prioritaria
+                        </label>
+
+                        <label class="opcion">
+                            <input type="checkbox" name="extras" value="gift">
+                            Presentación especial
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comentarios">Comentarios</label>
+                    <textarea id="comentarios" name="comentarios" placeholder="Escribí detalles adicionales sobre tu pedido..."></textarea>
+                </div>
+
+                <div class="form-botones">
+                    <button type="submit" class="btn-enviar">Enviar pedido</button>
+                    <button type="reset" class="btn-reset">Restablecer</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Urban Style Clothing. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
