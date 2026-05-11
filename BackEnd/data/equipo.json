@@ -1,0 +1,37 @@
+[
+{
+    "id": 1,
+    "nombre": "Agustín Cepeda",
+    "rol": "Fundador y Desarrollador",
+    "descripcion": "Líder del proyecto y encargado de que la plataforma digital funcione a la perfección para nuestros clientes.",
+    "foto": "../assets/img/desarrollador.png"
+},
+{
+    "id": 2,
+    "nombre": "Rodrigo Copreni",
+    "rol": "Director Creativo",
+    "descripcion": "Encargado de definir la estética de cada colección y de seleccionar las prendas que marcan tendencia.",
+    "foto": "../assets/img/director.png"
+},
+{
+    "id": 3,
+    "nombre": "Agustín Pascuali",
+    "rol": "Fotógrafo y Editor",
+    "descripcion": "Responsable de capturar la esencia urbana en cada sesión y de que nuestros productos luzcan increíbles en la web.",
+    "foto": "../assets/img/camara.png"
+},
+{
+    "id": 4,
+    "nombre": "Santiago Lares",
+    "rol": "Content Manager",
+    "descripcion": "Creador de contenido para redes sociales y encargado de mantener viva la comunidad de Urban Style.",
+    "foto": "../assets/img/cm.png"
+},
+{
+    "id": 5,
+    "nombre": "Juan Ramirez",
+    "rol": "Gestión de Ventas",
+    "descripcion": "Especialista en atención al cliente, asegurando que cada pedido llegue en tiempo y forma a tu casa.",
+    "foto": "../assets/img/ventas.png"
+}
+]
