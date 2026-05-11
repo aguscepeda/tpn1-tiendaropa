@@ -2,8 +2,7 @@ const express = require("express");
 const ServiciosRouter = express.Router();
 const serviciosData = require("../data/servicios.json");  // Importar datos de servicios desde el archivo JSON
 
-// Rutas para servicios
-
+// DEVUELVE TODOS LOS SERVICIOS DISPONIBLES
 ServiciosRouter.get("/", (req, res) => {
     try {
         res.json(serviciosData);  // Enviar la lista completa de servicios como respuesta en formato JSON
@@ -13,7 +12,8 @@ ServiciosRouter.get("/", (req, res) => {
     }   
 });
 
-ServiciosRouter.get("/:id", (req, res) => {   // modificar, pasar logica a los controladores
+// DEVUELVE LOS DETALLES DE UN SERVICIO ESPECÍFICO POR ID
+ServiciosRouter.get("/:id", (req, res) => {   
     try {
         const servicioId = req.params.id;
         const servicio = serviciosData.find((s) => s.id === parseInt(servicioId)); // Buscar el servicio por ID en el array de servicios, parseInt para convertir el ID a número
