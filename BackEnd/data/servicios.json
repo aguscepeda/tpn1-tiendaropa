@@ -1,0 +1,106 @@
+[
+{
+    "id": 1,
+    "nombre": "Remera Oversize Negra",
+    "descripcion": "Remera urbana de algodón premium.",
+    "precio": 25000,
+    "stock": 12,
+    "imagen": "/img/remera-oversize-negra.jpg"
+},
+{
+    "id": 2,
+    "nombre": "Buzo Hoodie Gris",
+    "descripcion": "Buzo con capucha ideal para invierno.",
+    "precio": 42000,
+    "stock": 8,
+    "imagen": "/img/buzo-hoodie-gris.jpg"
+},
+{
+    "id": 3,
+    "nombre": "Jean Baggy Celeste",
+    "descripcion": "Jean baggy fit estilo urbano.",
+    "precio": 38000,
+    "stock": 10,
+    "imagen": "/img/jean-baggy.jpg"
+},
+{
+    "id": 4,
+    "nombre": "Campera Puffer Negra",
+    "descripcion": "Campera inflable impermeable.",
+    "precio": 68000,
+    "stock": 5,
+    "imagen": "/img/puffer-negra.jpg"
+},
+{
+    "id": 5,
+    "nombre": "Cargo Beige",
+    "descripcion": "Pantalón cargo con bolsillos laterales.",
+    "precio": 35000,
+    "stock": 9,
+    "imagen": "/img/cargo-beige.jpg"
+},
+{
+    "id": 6,
+    "nombre": "Camiseta Básica Blanca",
+    "descripcion": "Camiseta básica unisex.",
+    "precio": 18000,
+    "stock": 20,
+    "imagen": "/img/basica-blanca.jpg"
+},
+{
+    "id": 7,
+    "nombre": "Gorra Snapback Negra",
+    "descripcion": "Gorra ajustable estilo streetwear.",
+    "precio": 15000,
+    "stock": 14,
+    "imagen": "/img/gorra-negra.jpg"
+},
+{
+    "id": 8,
+    "nombre": "Conjunto Deportivo",
+    "descripcion": "Conjunto cómodo para entrenamiento.",
+    "precio": 52000,
+    "stock": 6,
+    "imagen": "/img/conjunto-deportivo.jpg"
+},
+{
+    "id": 9,
+    "nombre": "Campera Denim",
+    "descripcion": "Campera de jean clásica.",
+    "precio": 47000,
+    "stock": 7,
+    "imagen": "/img/campera-denim.jpg"
+},
+{
+    "id": 10,
+    "nombre": "Jogger Negro",
+    "descripcion": "Jogger slim fit de algodón.",
+    "precio": 29000,
+    "stock": 13,
+    "imagen": "/img/jogger-negro.jpg"
+},
+{
+    "id": 11,
+    "nombre": "Sweater Tejido Marrón",
+    "descripcion": "Sweater tejido oversized.",
+    "precio": 33000,
+    "stock": 11,
+    "imagen": "/img/sweater-marron.jpg"
+},
+{
+    "id": 12,
+    "nombre": "Zapatillas Urbanas",
+    "descripcion": "Zapatillas cómodas para uso diario.",
+    "precio": 75000,
+    "stock": 4,
+    "imagen": "/img/zapatillas-urbanas.jpg"
+},
+{
+    "id": 13,
+    "nombre": "Chaleco Streetwear",
+    "descripcion": "Chaleco liviano estilo urbano.",
+    "precio": 31000,
+    "stock": 8,
+    "imagen": "/img/chaleco-streetwear.jpg"
+}
+]
