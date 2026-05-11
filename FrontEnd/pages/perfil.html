@@ -1,109 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
 
-    <header>
-        <nav>
-            <a href="../index.html">Inicio</a>
-            <a href="./servicios.html">Servicios</a>
-            <a href="./equipo.html">Equipo</a>
-            <a href="./perfil.html">Perfil</a>
-        </nav>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="shortcut icon" href="../assets/img/urbanStyle_logo.png" type="image/x-icon"> 
+    <title>Perfil - Urban Style Clothing</title>
+</head>
+
+  <body>
+    <header> <h1>Urban Style Clothing</h1>
     </header>
 
-    <main>
-        <section class="perfil-section">
-            <h1>Perfil de usuario</h1>
+    <nav> <!-- Barra de navegación -->
+        <ul>
+            <li><a href="../index.html" target="_self">Inicio</a></li>
+            <li><a href="./servicios.html" target="_self">Servicios/Productos</a></li>
+            <li><a href="./equipo.html" target="_self">Equipo/Sobre Nosotros</a></li>
+            <li><a href="./pedido.html" target="_self">Pedido Online</a></li>
+            <li><a href="./contacto.html" target="_self">Contacto</a></li>
+            <li><a href="./faq.html" target="_self">Preguntas Frecuentes</a></li>
+            <li><a href="./registro.html" target="_self">Registro</a></li>
+            <li><a href="./perfil.html" target="_self">Perfil</a></li>
+        </ul>
+    </nav>
 
-            <div id="perfil-container" class="perfil-container">
-                <p class="perfil-cargando">Cargando perfil...</p>
-            </div>
-        </section>
+    <main >
+      <h1>Panel de usuario</h1>
+      <section class="perfil-main">
+        <div>
+          <img class="perfil-foto"
+            src="../assets/img/perfil-placeholder.png"
+            alt="Foto de perfil"
+          />
+          <h2 class="perfil-titulo">Hola, John Doe  !</h2>
+        </div>
+        <div class="perfil-datos">
+          <data class="dato-item">
+          <p class="dato-valor">Nombre completo: John Doe</p>
+          <p class="dato-valor">Email: usuario@example.com</p>
+          <p class="dato-valor">Fecha de nacimiento: dd/mm/yyyy</p>
+          <p class="dato-valor">Contraseña: ********</p>
+          <p class="dato-valor">Miembro desde: 2026</p>
+          </data>
+        </div>
+      </section>
     </main>
-
-    <script>
-        const API_URL = "http://localhost:3000";
-
-        async function cargarPerfil() {
-            const contenedor = document.getElementById("perfil-container");
-
-            try {
-                // Traemos el usuario guardado por login.html
-                const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
-                const perfilId = localStorage.getItem("perfilId");
-
-                // Si no hay usuario logueado, mandamos al login
-                if (!usuarioLogueado || !perfilId) {
-                    window.location.href = "./login.html";
-                    return;
-                }
-
-                // Cargamos el perfil correspondiente al usuario que inició sesión
-                const respuesta = await fetch(`${API_URL}/perfil/${perfilId}`);
-
-                if (!respuesta.ok) {
-                    throw new Error("No se pudo obtener el perfil");
-                }
-
-                const perfil = await respuesta.json();
-
-                contenedor.innerHTML = `
-                    <article class="perfil-card">
-                        <div class="perfil-header">
-                            <img 
-                                src="${perfil.foto}" 
-                                alt="Foto de perfil de ${perfil.nombre}" 
-                                class="perfil-foto"
-                            >
-
-                            <div class="perfil-info">
-                                <h2>${perfil.nombre}</h2>
-                                <p><strong>Email:</strong> ${perfil.mail}</p>
-                                <p><strong>Fecha de registro:</strong> ${perfil.fechaRegistro}</p>
-                            </div>
-                        </div>
-
-                        <div class="perfil-pedidos">
-                            <h3>Últimos 3 pedidos</h3>
-
-                            <ul>
-                                ${perfil.ultimosPedidos.map((pedido) => `
-                                    <li>${pedido}</li>
-                                `).join("")}
-                            </ul>
-                        </div>
-
-                        <button class="btn-cerrar-sesion" onclick="cerrarSesion()">
-                            Cerrar sesión
-                        </button>
-                    </article>
-                `;
-            } catch (error) {
-                console.error("Error al cargar el perfil:", error);
-
-                contenedor.innerHTML = `
-                    <div class="perfil-error">
-                        <p>No se pudo cargar el perfil del usuario.</p>
-                        <button onclick="cargarPerfil()">Reintentar</button>
-                    </div>
-                `;
-            }
-        }
-
-        function cerrarSesion() {
-            localStorage.removeItem("usuarioLogueado");
-            localStorage.removeItem("perfilId");
-            window.location.href = "./login.html";
-        }
-
-        cargarPerfil();
-    </script>
-
-</body>
+    <footer>
+      <p>&copy; 2026 Urban Style Clothing - Todos los derechos reservados</p>
+    </footer>
+  </body>
 </html>
