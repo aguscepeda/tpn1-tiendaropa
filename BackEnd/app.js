@@ -11,18 +11,11 @@ app.get("/", (req, res) => {
   res.send("Servidor funcionando");  //Cuando arranca el servidor, si no esta esto muestra: Cannot GET /
 });
 
-//RUTAS SERVICIOS ------------------------------------------------------------------------------------------------------>
+
 
 app.use("/servicios", serviciosRoutes);   //cuando se accede a /servicios, se redirige a serviciosRoutes para manejar las rutas relacionadas con servicios
-app.use("/servicios/:id", serviciosRoutes);   //cuando se accede a /servicios/:id, se redirige a serviciosRoutes para manejar las rutas relacionadas con servicios por id
-
-//RUTAS EQUIPO ------------------------------------------------------------------------------------------------------>
-
 app.use("/equipo", equipoRoutes);   //cuando se accede a /equipo, se redirige a equipoRoutes para manejar las rutas relacionadas con el equipo
-
-//RUTAS PERFILES ------------------------------------------------------------------------------------------------------>
-
-app.use("/perfiles/:id", perfilesRoutes);   //cuando se accede a /perfiles/:id, se redirige a perfilesRoutes para manejar las rutas relacionadas con los perfiles por id
+app.use("/perfiles", perfilesRoutes);   //cuando se accede a /perfiles/:id, se redirige a perfilesRoutes para manejar las rutas relacionadas con los perfiles por id
 
 module.exports = app;
 
