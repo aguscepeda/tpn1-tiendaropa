@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "nombre": "Agustín Cepeda",
+        "mail": "agustincepeda@gmail.com",
+        "password": "1234",
+        "perfilId": 1
+    },
+    {
+        "id": 2,
+        "nombre": "Rodrigo Copreni",
+        "mail": "rodrigocopreni@gmail.com",
+        "password": "1234",
+        "perfilId": 2
+    },
+    {
+        "id": 3,
+        "nombre": "Agustín Pascuali",
+        "mail": "agustinpascuali@gmail.com",
+        "password": "1234",
+        "perfilId": 3
+    },
+    {
+        "id": 4,
+        "nombre": "Santiago Lares",
+        "mail": "santiagolares@gmail.com",
+        "password": "1234",
+        "perfilId": 4
+    },
+    {
+        "id": 5,
+        "nombre": "Juan Ramirez",
+        "mail": "juanramirez@gmail.com",
+        "password": "1234",
+        "perfilId": 5
+    }
+]
