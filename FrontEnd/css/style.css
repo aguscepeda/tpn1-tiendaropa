@@ -512,3 +512,229 @@ footer {
         gap: 0.8rem;
     }
 }
+
+/* =========================
+PERFIL DE USUARIO
+========================= */
+
+.perfil-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+}
+
+.perfil-section h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 0 0 18px rgba(255, 0, 170, 0.8);
+}
+
+.perfil-container {
+    width: 100%;
+    min-height: 250px;
+}
+
+.perfil-cargando {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+.perfil-card {
+    max-width: 780px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #1a1a1a, #111111);
+    border: 1px solid #333333;
+    border-radius: 18px;
+    padding: 2.5rem;
+    box-shadow: 0 0 40px rgba(255, 0, 170, 0.18);
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #333333;
+}
+
+.perfil-foto {
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #0f0f0f;
+    border: 3px solid #ff00aa;
+    box-shadow: 0 0 22px rgba(255, 0, 170, 0.5);
+}
+
+.perfil-info {
+    text-align: left;
+}
+
+.perfil-info h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 15px rgba(255, 0, 170, 0.8);
+}
+
+.perfil-info p {
+    margin: 0.5rem 0;
+    color: #cccccc;
+    font-size: 1rem;
+}
+
+.perfil-info strong {
+    color: #ffffff;
+}
+
+.perfil-pedidos {
+    margin-top: 2rem;
+}
+
+.perfil-pedidos h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px rgba(255, 0, 170, 0.7);
+}
+
+.perfil-pedidos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.perfil-pedidos li {
+    background-color: #0f0f0f;
+    border: 1px solid #333333;
+    border-left: 4px solid #ff00aa;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 0 15px rgba(255, 0, 170, 0.12);
+}
+
+.perfil-error {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(145deg, #1a1a1a, #111111);
+    border: 1px solid #333333;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 0 30px rgba(255, 0, 170, 0.15);
+}
+
+.perfil-error p {
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+}
+
+.perfil-error button {
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff00aa;
+    color: #000000;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.perfil-error button:hover {
+    background-color: #ff33bb;
+    box-shadow: 0 0 25px rgba(255, 0, 170, 0.7);
+    transform: scale(1.03);
+}
+
+/* Responsive perfil */
+
+@media (max-width: 768px) {
+    .perfil-section {
+        padding: 1.5rem;
+    }
+
+    .perfil-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .perfil-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .perfil-info {
+        text-align: center;
+    }
+
+    .perfil-foto {
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+    }
+
+    .perfil-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .perfil-info h2 {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+
+    .perfil-info p {
+        font-size: 0.95rem;
+    }
+
+    .perfil-pedidos h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Botón cerrar sesión */
+
+.btn-cerrar-sesion {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 0.85rem 1.6rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff00aa;
+    color: #000000;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 0 18px rgba(255, 0, 170, 0.45);
+    transition: all 0.3s ease;
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: #ff33bb;
+    box-shadow: 0 0 28px rgba(255, 0, 170, 0.75);
+    transform: scale(1.05);
+}
+
+.btn-cerrar-sesion:active {
+    transform: scale(0.98);
+}
