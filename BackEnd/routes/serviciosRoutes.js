@@ -1,11 +1,19 @@
 const express = require("express");
 const ServiciosRouter = express.Router();
-const serviciosData = require("../data/servicios.json");  // Importar datos de servicios desde el archivo JSON
+const fs = require("fs").promises;
+const path = require("path");
 
 // DEVUELVE TODOS LOS SERVICIOS DISPONIBLES
-ServiciosRouter.get("/", (req, res) => {
+ServiciosRouter.get("/", async (req, res) => {
     try {
-        res.json(serviciosData);  // Enviar la lista completa de servicios como respuesta en formato JSON
+    const data = await fs.readFile(
+        path.join(__dirname, "../data/servicios.json"),
+        "utf-8"
+    );
+
+    const serviciosData = JSON.parse(data);
+
+    res.json(serviciosData);
     } catch (error) {
         console.error("Error al obtener los servicios en ServiciosRouter.get('/'): ", error); // error en el js, datos que no existen, etc
         res.status(500).json({ error: "Error al obtener los servicios" });  // status y error que se muestra al cliente si ocurre un error al obtener los servicios
@@ -13,9 +21,14 @@ ServiciosRouter.get("/", (req, res) => {
 });
 
 // DEVUELVE LOS DETALLES DE UN SERVICIO ESPECÍFICO POR ID
-ServiciosRouter.get("/:id", (req, res) => {   
+ServiciosRouter.get("/:id", async (req, res) => {   
     try {
         const servicioId = req.params.id;
+        const data = await fs.readFile(
+            path.join(__dirname, "../data/servicios.json"),
+            "utf-8"
+        );
+        const serviciosData = JSON.parse(data);
         const servicio = serviciosData.find((s) => s.id === parseInt(servicioId)); // Buscar el servicio por ID en el array de servicios, parseInt para convertir el ID a número
         if (servicio) {                                                            // Si se encuentra el servicio, enviar los detalles del servicio como respuesta en formato JSON
             res.json(servicio);
