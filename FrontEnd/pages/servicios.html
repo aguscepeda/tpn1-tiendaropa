@@ -103,6 +103,7 @@
           servicios.forEach((servicio) => {
             contenedor.innerHTML += `
                     <div class="servicio-card">
+                        <img src="../assets/img/${servicio.imagen}" alt="${servicio.nombre}" class="servicios-imagen">
                         <h3>${servicio.nombre}</h3>
                         <p>${servicio.descripcion}</p>
                         <p><strong>Precio:</strong> $${servicio.precio}</p>
