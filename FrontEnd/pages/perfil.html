@@ -1,49 +1,57 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../css/style.css"> 
-    <link rel="shortcut icon" href="../assets/img/urbanStyle_logo.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/urbanStyle_logo.png"
+      type="image/x-icon"
+    />
     <title>Perfil - Urban Style Clothing</title>
-</head>
+  </head>
 
   <body>
-    <header> <h1>Urban Style Clothing</h1>
-    </header>
+    <header><h1>Urban Style Clothing</h1></header>
 
-    <nav> <!-- Barra de navegación -->
-        <ul>
-            <li><a href="../index.html" target="_self">Inicio</a></li>
-            <li><a href="./servicios.html" target="_self">Servicios/Productos</a></li>
-            <li><a href="./equipo.html" target="_self">Equipo/Sobre Nosotros</a></li>
-            <li><a href="./pedido.html" target="_self">Pedido Online</a></li>
-            <li><a href="./contacto.html" target="_self">Contacto</a></li>
-            <li><a href="./faq.html" target="_self">Preguntas Frecuentes</a></li>
-            <li><a href="./registro.html" target="_self">Registro</a></li>
-            <li><a href="./perfil.html" target="_self">Perfil</a></li>
-        </ul>
+    <nav>
+      <!-- Barra de navegación -->
+      <ul>
+        <li><a href="../index.html" target="_self">Inicio</a></li>
+        <li>
+          <a href="./servicios.html" target="_self">Servicios/Productos</a>
+        </li>
+        <li>
+          <a href="./equipo.html" target="_self">Equipo/Sobre Nosotros</a>
+        </li>
+        <li><a href="./pedido.html" target="_self">Pedido Online</a></li>
+        <li><a href="./contacto.html" target="_self">Contacto</a></li>
+        <li><a href="./faq.html" target="_self">Preguntas Frecuentes</a></li>
+        <li><a href="./registro.html" target="_self">Registro</a></li>
+        <li><a href="./perfil.html" target="_self">Perfil</a></li>
+      </ul>
     </nav>
 
-    <main >
+    <main>
       <h1>Panel de usuario</h1>
       <section class="perfil-main">
         <div>
-          <img class="perfil-foto"
+          <img
+            class="perfil-foto"
             src="../assets/img/perfil-placeholder.png"
             alt="Foto de perfil"
           />
-          <h2 class="perfil-titulo">Hola, John Doe  !</h2>
+          <h2 class="perfil-titulo">Hola, John Doe !</h2>
         </div>
         <div class="perfil-datos">
           <data class="dato-item">
-          <p class="dato-valor">Nombre completo: John Doe</p>
-          <p class="dato-valor">Email: usuario@example.com</p>
-          <p class="dato-valor">Fecha de nacimiento: dd/mm/yyyy</p>
-          <p class="dato-valor">Contraseña: ********</p>
-          <p class="dato-valor">Miembro desde: 2026</p>
+            <p class="dato-valor">Nombre completo: John Doe</p>
+            <p class="dato-valor">Email: usuario@example.com</p>
+            <p class="dato-valor">Fecha de nacimiento: dd/mm/yyyy</p>
+            <p class="dato-valor">Contraseña: ********</p>
+            <p class="dato-valor">Miembro desde: 2026</p>
           </data>
         </div>
       </section>
@@ -51,5 +59,38 @@
     <footer>
       <p>&copy; 2026 Urban Style Clothing - Todos los derechos reservados</p>
     </footer>
+
+    <script>
+      const API_URL = 'http://localhost:3000'
+
+      async function cargarPerfil() {
+        try {
+          const perfilId = localStorage.getItem('perfilId')
+
+          if (!perfilId) {
+            window.location.href = './login.html'
+            return
+          }
+
+          const respuesta = await fetch(`${API_URL}/perfil/${perfilId}`)
+          const perfil = await respuesta.json()
+
+          document.querySelector('.perfil-titulo').textContent =
+            `Hola, ${perfil.nombre}!`
+          document.querySelector('.perfil-foto').src = perfil.foto
+
+          document.querySelector('.dato-valor:nth-child(1)').textContent =
+            `Nombre completo: ${perfil.nombre}`
+          document.querySelector('.dato-valor:nth-child(2)').textContent =
+            `Email: ${perfil.mail}`
+          document.querySelector('.dato-valor:nth-child(3)').textContent =
+            `Miembro desde: ${perfil.fechaRegistro}`
+        } catch (error) {
+          console.error('Error al cargar el perfil:', error)
+        }
+      }
+
+      cargarPerfil()
+    </script>
   </body>
 </html>
