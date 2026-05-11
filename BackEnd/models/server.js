@@ -16,6 +16,10 @@ class Server {
   }
 
   rutas() {
+    this.app.get('/', (req, res) => {
+      res.send('Servidor funcionando, PAGINA PRINCIPAL')
+    })
+
     this.app.use('/servicios', require('../routes/serviciosRoutes'))
     this.app.use('/equipo', require('../routes/equipoRoutes'))
     this.app.use('/perfil', require('../routes/perfilesRoutes'))
