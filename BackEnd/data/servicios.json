@@ -102,5 +102,14 @@
     "precio": 31000,
     "stock": 8,
     "imagen": "/img/chaleco-streetwear.jpg"
+},
+{
+  "id": 14,
+  "nombre": "Camisa Oversize Blanca",
+  "descripcion": "Camisa oversize de estilo urbano y corte relajado.",
+  "precio": 36000,
+  "stock": 9,
+  "imagen": "/img/camisa-oversize-blanca.jpg"
 }
+
 ]

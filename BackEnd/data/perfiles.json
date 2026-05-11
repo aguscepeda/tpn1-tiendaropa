@@ -16,7 +16,7 @@
 "nombre": "Rodrigo Copreni",
 "mail": "rodrigocopreni@gmail.com",
 "fechaRegistro": "2026-02-08",
-"foto": "../assets/img/perfiles/rodrigo.png",
+"foto": "../assets/img/camara.png",
 "ultimosPedidos": [
     "Campera Puffer Negra",
     "Cargo Beige",
@@ -28,7 +28,7 @@
 "nombre": "Agustín Pascuali",
 "mail": "agustinpascuali@gmail.com",
 "fechaRegistro": "2026-01-20",
-"foto": "../assets/img/perfiles/pascuali.png",
+"foto": "../assets/img/director.png",
 "ultimosPedidos": [
     "Buzo Hoodie Gris",
     "Jean Baggy Celeste",
@@ -40,7 +40,7 @@
 "nombre": "Santiago Lares",
 "mail": "santiagolares@gmail.com",
 "fechaRegistro": "2026-04-02",
-"foto": "../assets/img/perfiles/santiago.png",
+"foto": "../assets/img/cm.png",
 "ultimosPedidos": [
     "Campera Denim",
     "Sweater Tejido Marrón",
@@ -52,7 +52,7 @@
 "nombre": "Juan Ramirez",
 "mail": "juanramirez@gmail.com",
 "fechaRegistro": "2026-03-28",
-"foto": "../assets/img/perfiles/juan.png",
+"foto": "../assets/img/ventas.png",
 "ultimosPedidos": [
     "Chaleco Streetwear",
     "Jogger Negro",
