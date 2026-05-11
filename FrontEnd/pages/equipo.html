@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/style.css"> <link rel="shortcut icon" href="../assets/img/urbanStyle_logo.png" type="image/x-icon"> <title>Equipo - Urban Style Clothing</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/img/urbanStyle_logo.png" type="image/x-icon">
+
+    <title>Equipo - Urban Style Clothing</title>
 </head>
 
 <body>
 
-    <header> <h1>Urban Style Clothing</h1>
+    <header>
+        <h1>Urban Style Clothing</h1>
     </header>
 
-    <nav>  <!-- Barra de navegación -->
+    <nav>
         <ul>
             <li><a href="../index.html" target="_self">Inicio</a></li>
             <li><a href="./servicios.html" target="_self">Servicios/Productos</a></li>
@@ -21,60 +25,89 @@
             <li><a href="./pedido.html" target="_self">Pedido Online</a></li>
             <li><a href="./contacto.html" target="_self">Contacto</a></li>
             <li><a href="./faq.html" target="_self">Preguntas Frecuentes</a></li>
-            <li><a href="./registro.html" target="_self">Registro</a></li>
+            <li><a href="./login.html" target="_self">Login</a></li>
             <li><a href="./perfil.html" target="_self">Perfil</a></li>
         </ul>
     </nav>
 
-    <main> <section class="equipo-section">
+    <main>
+        <section class="equipo-section">
             <h2>Nuestro Equipo</h2>
             <p class="subtitulo">Conocé a los profesionales que hacen posible nuestra tienda.</p>
 
-            <div class="contenedor-equipo">
-
-                <div class="fila-equipo">
-                    <div class="tarjeta-integrante">
-                        <img src="../assets/img/desarrollador.png" alt="Foto del Desarrollador" class="img-integrante">
-                        <h3>Agustín Cepeda</h3>
-                        <p class="rol">Fundador y Desarrollador</p>
-                        <p>Líder del proyecto y encargado de que la plataforma digital funcione a la perfección para nuestros clientes.</p>
-                    </div>
-
-                    <div class="tarjeta-integrante">
-                        <img src="../assets/img/director.png" alt="Foto del Director" class="img-integrante">
-                        <h3>Rodrigo Copreni</h3>
-                        <p class="rol">Director Creativo</p>
-                        <p>Encargado de definir la estética de cada colección y de seleccionar las prendas que marcan tendencia.</p>
-                    </div>
-                </div> <div class="fila-equipo">
-                    <div class="tarjeta-integrante">
-                        <img src="../assets/img/camara.png" alt="Foto del Fotografo" class="img-integrante">
-                        <h3>Agustín Pascuali</h3>
-                        <p class="rol">Fotógrafo y Editor</p>
-                        <p>Responsable de capturar la esencia urbana en cada sesión y de que nuestros productos luzcan increíbles en la web.</p>
-                    </div>
-
-                    <div class="tarjeta-integrante">
-                        <img src="../assets/img/cm.png" alt="Foto del CM" class="img-integrante">
-                        <h3>Santiago Lares</h3>
-                        <p class="rol">Content Manager</p>
-                        <p>Creador de contenido para redes sociales y encargado de mantener viva la comunidad de Urban Style.</p>
-                    </div>
-
-                    <div class="tarjeta-integrante">
-                        <img src="../assets/img/ventas.png" alt="Foto de Logística" class="img-integrante">
-                        <h3>Juan Ramirez</h3>
-                        <p class="rol">Gestión de Ventas</p>
-                        <p>Especialista en atención al cliente, asegurando que cada pedido llegue en tiempo y forma a tu casa.</p>
-                    </div>
-                </div> </div>
+            <div id="contenedor-equipo" class="contenedor-equipo">
+                <p>Cargando equipo...</p>
+            </div>
         </section>
-
     </main>
 
     <footer>
         <p>&copy; 2026 Urban Style Clothing. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        const API_URL = "http://localhost:3000";
+
+        async function cargarEquipo() {
+            const contenedorEquipo = document.getElementById("contenedor-equipo");
+
+            try {
+                const respuesta = await fetch(`${API_URL}/equipo`);
+
+                if (!respuesta.ok) {
+                    throw new Error("No se pudo obtener el equipo");
+                }
+
+                const equipo = await respuesta.json();
+
+                if (equipo.length === 0) {
+                    contenedorEquipo.innerHTML = `
+                        <p>No hay integrantes cargados por el momento.</p>
+                    `;
+                    return;
+                }
+
+                const primeraFila = equipo.slice(0, 2);
+                const segundaFila = equipo.slice(2);
+
+                contenedorEquipo.innerHTML = `
+                    <div class="fila-equipo">
+                        ${primeraFila.map((integrante) => crearTarjetaIntegrante(integrante)).join("")}
+                    </div>
+
+                    <div class="fila-equipo">
+                        ${segundaFila.map((integrante) => crearTarjetaIntegrante(integrante)).join("")}
+                    </div>
+                `;
+
+            } catch (error) {
+                console.error("Error al cargar el equipo:", error);
+
+                contenedorEquipo.innerHTML = `
+                    <p>No se pudo cargar la información del equipo.</p>
+                    <button onclick="cargarEquipo()" class="btn-enviar">Reintentar</button>
+                `;
+            }
+        }
+
+        function crearTarjetaIntegrante(integrante) {
+            return `
+                <div class="tarjeta-integrante">
+                    <img 
+                        src="${integrante.foto}" 
+                        alt="Foto de ${integrante.nombre}" 
+                        class="img-integrante"
+                    >
+
+                    <h3>${integrante.nombre}</h3>
+                    <p class="rol">${integrante.rol}</p>
+                    <p>${integrante.descripcion}</p>
+                </div>
+            `;
+        }
+
+        cargarEquipo();
+    </script>
 
 </body>
 
