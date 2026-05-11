@@ -1,12 +1,6 @@
-const express = require("express");
-
-const app = express();
+const app = require("./app");
 const PORT = 3000;
 
-app.get("/", (req, res) => {
-  res.send("Servidor funcionando");
-});
-
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en puerto ${PORT}`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
