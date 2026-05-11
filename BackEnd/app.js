@@ -8,7 +8,7 @@ const perfilesRoutes = require("./routes/perfilesRoutes"); //traigo desde perfil
 app.use(express.json()); // Middleware para parsear JSON en las solicitudes entrantes
 
 app.get("/", (req, res) => {
-  res.send("Servidor funcionando");  //Cuando arranca el servidor, si no esta esto muestra: Cannot GET /
+  res.send("Servidor funcionando, PAGINA PRINCIPAL");  //Cuando arranca el servidor, si no esta esto muestra: Cannot GET /
 });
 
 
