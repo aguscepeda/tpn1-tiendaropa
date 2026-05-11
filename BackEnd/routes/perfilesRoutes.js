@@ -1,11 +1,17 @@
 const express = require("express");
 const PerfilesRouter = express.Router();
-const perfilesData = require("../data/perfiles.json");  // Importar datos de perfiles desde el archivo JSON
+const fs = require("fs").promises;
+const path = require("path");
 
 // DEVUELVE LOS DETALLES DE UN PERFIL ESPECÍFICO POR ID
-PerfilesRouter.get("/:id", (req, res) => {
+PerfilesRouter.get("/:id", async (req, res) => {
     try {
         const perfilId = req.params.id;
+        const data = await fs.readFile(
+            path.join(__dirname, "../data/perfiles.json"),
+            "utf-8"
+        );
+        const perfilesData = JSON.parse(data);
         const perfil = perfilesData.find((p) => p.id === parseInt(perfilId)); // Buscar el perfil por ID en el array de perfiles, parseInt para convertir el ID a número
         if (perfil) {                                                            // Si se encuentra el perfil, enviar los detalles del perfil como respuesta en formato JSON
             res.json(perfil);
