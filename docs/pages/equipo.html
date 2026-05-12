@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/urbanStyle_logo.png"
+      type="image/x-icon"
+    />
+
+    <title>Equipo - Urban Style Clothing</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Urban Style Clothing</h1>
+    </header>
+
+    <nav>
+      <!-- Barra de navegación -->
+      <ul>
+        <li><a href="../index.html" target="_self">Inicio</a></li>
+        <li>
+          <a href="./servicios.html" target="_self">Servicios/Productos</a>
+        </li>
+        <li>
+          <a href="./equipo.html" target="_self">Equipo/Sobre Nosotros</a>
+        </li>
+        <li><a href="./pedido.html" target="_self">Pedido Online</a></li>
+        <li><a href="./contacto.html" target="_self">Contacto</a></li>
+        <li><a href="./faq.html" target="_self">Preguntas Frecuentes</a></li>
+        <li><a href="./registro.html" target="_self">Registro</a></li>
+        <li><a href="./perfil.html" target="_self">Perfil</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="equipo-section">
+        <h2>Nuestro Equipo</h2>
+
+        <p class="subtitulo">
+          Conocé a los profesionales que hacen posible nuestra tienda.
+        </p>
+
+        <div class="contenedor-equipo" id="contenedor-equipo">
+          <p>Cargando equipo...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Urban Style Clothing. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+      const LOCAL_API_URL = 'http://localhost:3000'
+      const RENDER_API_URL = 'https://tp1ytp3.onrender.com'
+
+      const API_URL =
+        window.location.hostname === '127.0.0.1' ||
+        window.location.hostname === 'localhost'
+          ? LOCAL_API_URL
+          : RENDER_API_URL
+
+      async function cargarEquipo() {
+        const contenedor = document.getElementById('contenedor-equipo')
+
+        try {
+          const respuesta = await fetch(`${API_URL}/equipo`)
+
+          if (!respuesta.ok) {
+            throw new Error('No se pudo obtener el equipo')
+          }
+
+          const equipo = await respuesta.json()
+
+          contenedor.innerHTML = ''
+
+          equipo.forEach((integrante) => {
+            contenedor.innerHTML += `
+                        <div class="tarjeta-integrante">
+                            <img 
+                                src="${integrante.foto}" 
+                                alt="Foto de ${integrante.nombre}" 
+                                class="img-integrante"
+                            >
+                            <h3>${integrante.nombre}</h3>
+                            <p class="rol">${integrante.rol}</p>
+                            <p>${integrante.descripcion}</p>
+                        </div>
+                    `
+          })
+        } catch (error) {
+          console.error('Error al cargar el equipo:', error)
+
+          contenedor.innerHTML = `
+                    <p>Error al cargar el equipo.</p>
+                `
+        }
+      }
+
+      cargarEquipo()
+    </script>
+  </body>
+</html>
