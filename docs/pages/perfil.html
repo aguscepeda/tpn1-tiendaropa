@@ -43,16 +43,23 @@
             src="../assets/img/perfil-placeholder.png"
             alt="Foto de perfil"
           />
-          <h2 class="perfil-titulo">Hola, John Doe !</h2>
+          <h2 class="perfil-titulo">Cargando...</h2>
         </div>
+
         <div class="perfil-datos">
           <data class="dato-item">
-            <p class="dato-valor">Nombre completo: John Doe</p>
-            <p class="dato-valor">Email: usuario@example.com</p>
-            <p class="dato-valor">Fecha de nacimiento: dd/mm/yyyy</p>
+            <p id="perfil-nombre" class="dato-valor">Nombre completo: —</p>
+            <p id="perfil-email" class="dato-valor">Email: —</p>
+            <p id="perfil-registro" class="dato-valor">Miembro desde: —</p>
             <p class="dato-valor">Contraseña: ********</p>
-            <p class="dato-valor">Miembro desde: 2026</p>
           </data>
+        </div>
+
+        <div class="perfil-pedidos">
+          <h3>Últimos pedidos</h3>
+          <ul id="lista-pedidos">
+            <li>Cargando pedidos...</li>
+          </ul>
         </div>
       </section>
     </main>
@@ -85,13 +92,21 @@
           document.querySelector('.perfil-titulo').textContent =
             `Hola, ${perfil.nombre}!`
           document.querySelector('.perfil-foto').src = perfil.foto
-
-          document.querySelector('.dato-valor:nth-child(1)').textContent =
+          document.getElementById('perfil-nombre').textContent =
             `Nombre completo: ${perfil.nombre}`
-          document.querySelector('.dato-valor:nth-child(2)').textContent =
+          document.getElementById('perfil-email').textContent =
             `Email: ${perfil.mail}`
-          document.querySelector('.dato-valor:nth-child(3)').textContent =
+          document.getElementById('perfil-registro').textContent =
             `Miembro desde: ${perfil.fechaRegistro}`
+
+          const lista = document.getElementById('lista-pedidos')
+          if (perfil.ultimosPedidos && perfil.ultimosPedidos.length > 0) {
+            lista.innerHTML = perfil.ultimosPedidos
+              .map((pedido) => `<li>${pedido}</li>`)
+              .join('')
+          } else {
+            lista.innerHTML = '<li>Sin pedidos registrados.</li>'
+          }
         } catch (error) {
           console.error('Error al cargar el perfil:', error)
         }
