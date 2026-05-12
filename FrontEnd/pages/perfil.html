@@ -61,7 +61,14 @@
     </footer>
 
     <script>
-      const API_URL = 'http://localhost:3000'
+      const LOCAL_API_URL = 'http://localhost:3000'
+      const RENDER_API_URL = 'https://tp1ytp3.onrender.com'
+
+      const API_URL =
+        window.location.hostname === '127.0.0.1' ||
+        window.location.hostname === 'localhost'
+          ? LOCAL_API_URL
+          : RENDER_API_URL
 
       async function cargarPerfil() {
         try {

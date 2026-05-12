@@ -10,14 +10,14 @@
       href="../assets/img/urbanStyle_logo.png"
       type="image/x-icon"
     />
+
     <title>Equipo - Urban Style Clothing</title>
   </head>
 
-    cargarEquipo()
-  </script>
-
   <body>
-    <header><h1>Urban Style Clothing</h1></header>
+    <header>
+      <h1>Urban Style Clothing</h1>
+    </header>
 
     <nav>
       <!-- Barra de navegación -->
@@ -40,13 +40,14 @@
     <main>
       <section class="equipo-section">
         <h2>Nuestro Equipo</h2>
+
         <p class="subtitulo">
           Conocé a los profesionales que hacen posible nuestra tienda.
         </p>
 
-       <div class="contenedor-equipo" id="contenedor-equipo">
-            p>Cargando equipo...</p>
-       </div>
+        <div class="contenedor-equipo" id="contenedor-equipo">
+          <p>Cargando equipo...</p>
+        </div>
       </section>
     </main>
 
@@ -55,37 +56,53 @@
     </footer>
 
     <script>
-    const API_URL = "http://localhost:3000"
+      const LOCAL_API_URL = 'http://localhost:3000'
+      const RENDER_API_URL = 'https://tp1ytp3.onrender.com'
 
-    async function cargarEquipo() {
+      const API_URL =
+        window.location.hostname === '127.0.0.1' ||
+        window.location.hostname === 'localhost'
+          ? LOCAL_API_URL
+          : RENDER_API_URL
+
+      async function cargarEquipo() {
+        const contenedor = document.getElementById('contenedor-equipo')
+
         try {
-            const respuesta = await fetch(`${API_URL}/equipo`)
-            const equipo = await respuesta.json()
+          const respuesta = await fetch(`${API_URL}/equipo`)
 
-            const contenedor = document.getElementById("contenedor-equipo")
-            contenedor.innerHTML = ""
+          if (!respuesta.ok) {
+            throw new Error('No se pudo obtener el equipo')
+          }
 
-            equipo.forEach(integrante => {
-                contenedor.innerHTML += `
-                    <div class="tarjeta-integrante">
-                        <img src="${integrante.foto}" alt="Foto de ${integrante.nombre}" class="img-integrante">
-                        <h3>${integrante.nombre}</h3>
-                        <p class="rol">${integrante.rol}</p>
-                        <p>${integrante.descripcion}</p>
-                    </div>
-                `
-            })
+          const equipo = await respuesta.json()
+
+          contenedor.innerHTML = ''
+
+          equipo.forEach((integrante) => {
+            contenedor.innerHTML += `
+                        <div class="tarjeta-integrante">
+                            <img 
+                                src="${integrante.foto}" 
+                                alt="Foto de ${integrante.nombre}" 
+                                class="img-integrante"
+                            >
+                            <h3>${integrante.nombre}</h3>
+                            <p class="rol">${integrante.rol}</p>
+                            <p>${integrante.descripcion}</p>
+                        </div>
+                    `
+          })
         } catch (error) {
-            console.error("Error al cargar el equipo:", error)
-            document.getElementById("contenedor-equipo").innerHTML = "<p>Error al cargar el equipo</p>"
+          console.error('Error al cargar el equipo:', error)
+
+          contenedor.innerHTML = `
+                    <p>Error al cargar el equipo.</p>
+                `
         }
-    }
+      }
 
-    cargarEquipo()
-</script>
-
+      cargarEquipo()
+    </script>
   </body>
-
-    
-
 </html>
