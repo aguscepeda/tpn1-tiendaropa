@@ -1,62 +1,62 @@
 [
-{
-"id": 1,
-"nombre": "Agustín Cepeda",
-"mail": "agustincepeda@gmail.com",
-"fechaRegistro": "2026-03-15",
-"foto": "../assets/img/perfiles/agustin.png",
-"ultimosPedidos": [
-    "Remera Oversize Negra",
-    "Jogger Negro",
-    "Gorra Snapback Negra"
-]
-},
-{
-"id": 2,
-"nombre": "Rodrigo Copreni",
-"mail": "rodrigocopreni@gmail.com",
-"fechaRegistro": "2026-02-08",
-"foto": "../assets/img/camara.png",
-"ultimosPedidos": [
-    "Campera Puffer Negra",
-    "Cargo Beige",
-    "Zapatillas Urbanas"
-]
-},
-{
-"id": 3,
-"nombre": "Agustín Pascuali",
-"mail": "agustinpascuali@gmail.com",
-"fechaRegistro": "2026-01-20",
-"foto": "../assets/img/director.png",
-"ultimosPedidos": [
-    "Buzo Hoodie Gris",
-    "Jean Baggy Celeste",
-    "Conjunto Deportivo"
-]
-},
-{
-"id": 4,
-"nombre": "Santiago Lares",
-"mail": "santiagolares@gmail.com",
-"fechaRegistro": "2026-04-02",
-"foto": "../assets/img/cm.png",
-"ultimosPedidos": [
-    "Campera Denim",
-    "Sweater Tejido Marrón",
-    "Camiseta Básica Blanca"
-]
-},
-{
-"id": 5,
-"nombre": "Juan Ramirez",
-"mail": "juanramirez@gmail.com",
-"fechaRegistro": "2026-03-28",
-"foto": "../assets/img/ventas.png",
-"ultimosPedidos": [
-    "Chaleco Streetwear",
-    "Jogger Negro",
-    "Zapatillas Urbanas"
-]
-}
+  {
+    "id": 1,
+    "nombre": "Agustín Cepeda",
+    "mail": "agustincepeda@gmail.com",
+    "fechaRegistro": "2026-03-15",
+    "foto": "../assets/img/perfil-placeholder.png",
+    "ultimosPedidos": [
+      "Remera Oversize Negra",
+      "Jogger Negro",
+      "Gorra Snapback Negra"
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Rodrigo Copreni",
+    "mail": "rodrigocopreni@gmail.com",
+    "fechaRegistro": "2026-02-08",
+    "foto": "../assets/img/camara.png",
+    "ultimosPedidos": [
+      "Campera Puffer Negra",
+      "Cargo Beige",
+      "Zapatillas Urbanas"
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Agustín Pascuali",
+    "mail": "agustinpascuali@gmail.com",
+    "fechaRegistro": "2026-01-20",
+    "foto": "../assets/img/director.png",
+    "ultimosPedidos": [
+      "Buzo Hoodie Gris",
+      "Jean Baggy Celeste",
+      "Conjunto Deportivo"
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Santiago Lares",
+    "mail": "santiagolares@gmail.com",
+    "fechaRegistro": "2026-04-02",
+    "foto": "../assets/img/cm.png",
+    "ultimosPedidos": [
+      "Campera Denim",
+      "Sweater Tejido Marrón",
+      "Camiseta Básica Blanca"
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Juan Ramirez",
+    "mail": "juanramirez@gmail.com",
+    "fechaRegistro": "2026-03-28",
+    "foto": "../assets/img/ventas.png",
+    "ultimosPedidos": [
+      "Chaleco Streetwear",
+      "Jogger Negro",
+      "Zapatillas Urbanas"
+    ]
+  }
 ]
